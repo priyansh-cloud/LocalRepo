@@ -8,12 +8,12 @@ public class CountDigits {
         while(n>0){
             
             int ld= n%10;
+            System.out.println("Last digit: " + ld); // 👈 use ld
             count ++;
             n = n/10;
-
+            
         }
-        System.out.println(count);
-        
+        System.out.println("Total digits = " + count);
     }
     
 }
