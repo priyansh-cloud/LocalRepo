@@ -2,13 +2,15 @@ public class Swapping {
 
     public static void f(int i, int n, int arr[]){
        
-        if(i>=n/2){
+        if(i>=n/2){ // base case
             return;
         }
+       // swap elements at i and n-i-1
        int temp=  arr[i];
        arr[i]= arr[n-i-1];
        arr[n-i-1]=temp;
-        f(i+1, n, arr);
+
+        f(i+1, n, arr); // recursive call
     }
 
     public static void main(String[] args) {
@@ -16,7 +18,7 @@ public class Swapping {
         int arr[]= {2,3,4,5,6};
         int n= arr.length;
       
-        f(0,n,arr);
+        f(0,n,arr); // pass n and arr correctly
 
          for(int i=0; i<= arr.length; i++){
             System.out.println(arr[i]);
